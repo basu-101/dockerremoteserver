@@ -1,0 +1,14 @@
+# Use the official Python image as the base image
+FROM python:3.9
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the current directory's content into the container's working directory
+COPY . /app
+
+# Install Flask and its dependencies
+RUN pip install Flask
+
+# Specify the command to run the Flask application
+CMD ["python", "app.py"]
